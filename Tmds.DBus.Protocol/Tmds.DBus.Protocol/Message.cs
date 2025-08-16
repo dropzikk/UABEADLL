@@ -1,0 +1,277 @@
+using System;
+using System.Buffers;
+using System.Text;
+using Nerdbank.Streams;
+
+namespace Tmds.DBus.Protocol;
+
+public sealed class Message
+{
+	private struct HeaderBuffer
+	{
+		private byte[] _buffer;
+
+		private int _length;
+
+		private string? _string;
+
+		public Span<byte> Span => new Span<byte>(_buffer, 0, Math.Max(_length, 0));
+
+		public bool IsSet => _length != -1;
+
+		public void Set(ReadOnlySpan<byte> data)
+		{
+			_string = null;
+			if (_buffer == null || data.Length > _buffer.Length)
+			{
+				_buffer = new byte[data.Length];
+			}
+			data.CopyTo(_buffer);
+			_length = data.Length;
+		}
+
+		public void Clear()
+		{
+			_length = -1;
+			_string = null;
+		}
+
+		public override string? ToString()
+		{
+			object obj;
+			if (_length != -1)
+			{
+				obj = _string;
+				if (obj == null)
+				{
+					return _string = Encoding.UTF8.GetString(Span);
+				}
+			}
+			else
+			{
+				obj = null;
+			}
+			return (string?)obj;
+		}
+	}
+
+	private const int HeaderFieldsLengthOffset = 12;
+
+	private readonly MessagePool _pool;
+
+	private readonly Sequence<byte> _data;
+
+	private UnixFdCollection? _handles;
+
+	private ReadOnlySequence<byte> _body;
+
+	private HeaderBuffer _path;
+
+	private HeaderBuffer _interface;
+
+	private HeaderBuffer _member;
+
+	private HeaderBuffer _errorName;
+
+	private HeaderBuffer _destination;
+
+	private HeaderBuffer _sender;
+
+	private HeaderBuffer _signature;
+
+	public bool IsBigEndian { get; private set; }
+
+	public uint Serial { get; private set; }
+
+	public MessageFlags MessageFlags { get; private set; }
+
+	public MessageType MessageType { get; private set; }
+
+	public uint? ReplySerial { get; private set; }
+
+	public int UnixFdCount { get; private set; }
+
+	public string? PathAsString => _path.ToString();
+
+	public string? InterfaceAsString => _interface.ToString();
+
+	public string? MemberAsString => _member.ToString();
+
+	public string? ErrorNameAsString => _errorName.ToString();
+
+	public string? DestinationAsString => _destination.ToString();
+
+	public string? SenderAsString => _sender.ToString();
+
+	public string? SignatureAsString => _signature.ToString();
+
+	public ReadOnlySpan<byte> Path => _path.Span;
+
+	public ReadOnlySpan<byte> Interface => _interface.Span;
+
+	public ReadOnlySpan<byte> Member => _member.Span;
+
+	public ReadOnlySpan<byte> ErrorName => _errorName.Span;
+
+	public ReadOnlySpan<byte> Destination => _destination.Span;
+
+	public ReadOnlySpan<byte> Sender => _sender.Span;
+
+	public ReadOnlySpan<byte> Signature => _signature.Span;
+
+	public bool PathIsSet => _path.IsSet;
+
+	public bool InterfaceIsSet => _interface.IsSet;
+
+	public bool MemberIsSet => _member.IsSet;
+
+	public bool ErrorNameIsSet => _errorName.IsSet;
+
+	public bool DestinationIsSet => _destination.IsSet;
+
+	public bool SenderIsSet => _sender.IsSet;
+
+	public bool SignatureIsSet => _signature.IsSet;
+
+	public Reader GetBodyReader()
+	{
+		return new Reader(IsBigEndian, _body, _handles, UnixFdCount);
+	}
+
+	internal Message(MessagePool messagePool, Sequence<byte> sequence)
+	{
+		_pool = messagePool;
+		_data = sequence;
+		ClearHeaders();
+	}
+
+	internal void ReturnToPool()
+	{
+		_data.Reset();
+		ClearHeaders();
+		_handles?.DisposeHandles();
+		_pool.Return(this);
+	}
+
+	private void ClearHeaders()
+	{
+		ReplySerial = null;
+		UnixFdCount = 0;
+		_path.Clear();
+		_interface.Clear();
+		_member.Clear();
+		_errorName.Clear();
+		_destination.Clear();
+		_sender.Clear();
+		_signature.Clear();
+	}
+
+	internal static Message? TryReadMessage(MessagePool messagePool, ref ReadOnlySequence<byte> sequence, UnixFdCollection? handles = null)
+	{
+		SequenceReader<byte> seqReader2 = new SequenceReader<byte>(sequence);
+		if (!seqReader2.TryRead(out var value2) || !seqReader2.TryRead(out var value3) || !seqReader2.TryRead(out var value4) || !seqReader2.TryRead(out var value5))
+		{
+			return null;
+		}
+		if (value5 != 1)
+		{
+			throw new NotSupportedException();
+		}
+		bool isBigEndian2 = value2 == 66;
+		if (!TryReadUInt32(ref seqReader2, isBigEndian2, out var value6) || !TryReadUInt32(ref seqReader2, isBigEndian2, out var value7) || !TryReadUInt32(ref seqReader2, isBigEndian2, out var value8))
+		{
+			return null;
+		}
+		value8 = (uint)ProtocolConstants.Align((int)value8, DBusType.Struct);
+		long num = seqReader2.Consumed + value8 + value6;
+		if (sequence.Length < num)
+		{
+			return null;
+		}
+		Message message = messagePool.Rent();
+		Sequence<byte> data = message._data;
+		do
+		{
+			ReadOnlySpan<byte> span = sequence.First.Span;
+			int val = (int)Math.Min(num, span.Length);
+			Span<byte> span2 = data.GetSpan(0);
+			val = Math.Min(val, span2.Length);
+			span.Slice(0, val).CopyTo(span2);
+			data.Advance(val);
+			sequence = sequence.Slice(val);
+			num -= val;
+		}
+		while (num > 0);
+		message.IsBigEndian = isBigEndian2;
+		message.Serial = value7;
+		message.MessageType = (MessageType)value3;
+		message.MessageFlags = (MessageFlags)value4;
+		message.ParseHeader(handles);
+		return message;
+		static bool TryReadUInt32(ref SequenceReader<byte> seqReader, bool isBigEndian, out uint value)
+		{
+			int value9;
+			bool result = (isBigEndian && seqReader.TryReadBigEndian(out value9)) || seqReader.TryReadLittleEndian(out value9);
+			value = (uint)value9;
+			return result;
+		}
+	}
+
+	private void ParseHeader(UnixFdCollection? handles)
+	{
+		Reader reader = new Reader(IsBigEndian, _data.AsReadOnlySequence);
+		reader.Advance(12L);
+		ArrayEnd iterator = reader.ReadArrayStart(DBusType.Struct);
+		while (reader.HasNext(iterator))
+		{
+			MessageHeader messageHeader = (MessageHeader)reader.ReadByte();
+			_ = (ReadOnlySpan<byte>)reader.ReadSignature();
+			switch (messageHeader)
+			{
+			case MessageHeader.Path:
+				_path.Set(reader.ReadObjectPathAsSpan());
+				break;
+			case MessageHeader.Interface:
+				_interface.Set(reader.ReadStringAsSpan());
+				break;
+			case MessageHeader.Member:
+				_member.Set(reader.ReadStringAsSpan());
+				break;
+			case MessageHeader.ErrorName:
+				_errorName.Set(reader.ReadStringAsSpan());
+				break;
+			case MessageHeader.ReplySerial:
+				ReplySerial = reader.ReadUInt32();
+				break;
+			case MessageHeader.Destination:
+				_destination.Set(reader.ReadStringAsSpan());
+				break;
+			case MessageHeader.Sender:
+				_sender.Set(reader.ReadStringAsSpan());
+				break;
+			case MessageHeader.Signature:
+				_signature.Set(reader.ReadSignature());
+				break;
+			case MessageHeader.UnixFds:
+				UnixFdCount = (int)reader.ReadUInt32();
+				if (UnixFdCount > 0)
+				{
+					if (handles == null || UnixFdCount > handles.Count)
+					{
+						throw new ProtocolException("Received less handles than UNIX_FDS.");
+					}
+					if (_handles == null)
+					{
+						_handles = new UnixFdCollection(handles.IsRawHandleCollection);
+					}
+					handles.MoveTo(_handles, UnixFdCount);
+				}
+				break;
+			default:
+				throw new NotSupportedException();
+			}
+		}
+		reader.AlignStruct();
+		_body = reader.UnreadSequence;
+	}
+}
