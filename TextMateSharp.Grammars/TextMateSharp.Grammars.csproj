@@ -1,0 +1,632 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>TextMateSharp.Grammars</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="TextMateSharp.Grammars.Resources.Themes.abyss-color-theme.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Themes.dark_plus.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Themes.dark_vs.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Themes.dimmed-monokai-color-theme.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Themes.hc_black.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Themes.hc_light.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Themes.kimbie-dark-color-theme.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Themes.light_plus.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Themes.light_vs.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Themes.monokai-color-theme.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Themes.quietlight-color-theme.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Themes.Red-color-theme.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Themes.solarized-dark-color-theme.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Themes.solarized-light-color-theme.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Themes.tomorrow-night-blue-color-theme.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.asciidoc.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.asciidoc.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.asciidoc.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.asciidoc.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.asciidoc.syntaxes.asciidoc.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.bat.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.bat.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.bat.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.bat.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.bat.syntaxes.batchfile.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.clojure.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.clojure.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.clojure.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.clojure.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.clojure.syntaxes.clojure.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.coffeescript.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.coffeescript.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.coffeescript.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.coffeescript.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.coffeescript.syntaxes.coffeescript.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.cpp.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.cpp.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.cpp.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.cpp.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.cpp.syntaxes.c.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.cpp.syntaxes.cpp.embedded.macro.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.cpp.syntaxes.cpp.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.cpp.syntaxes.cuda-cpp.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.cpp.syntaxes.platform.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.csharp.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.csharp.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.csharp.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.csharp.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.csharp.syntaxes.csharp.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.css.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.css.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.css.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.css.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.css.syntaxes.css.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.dart.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.dart.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.dart.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.dart.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.dart.syntaxes.dart.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.diff.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.diff.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.diff.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.diff.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.diff.syntaxes.diff.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.docker.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.docker.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.docker.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.docker.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.docker.syntaxes.docker.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.fsharp.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.fsharp.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.fsharp.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.fsharp.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.fsharp.syntaxes.fsharp.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.git.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.git.languages.diff.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.git.languages.ignore.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.git.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.git.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.git.syntaxes.diff.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.git.syntaxes.ignore.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.go.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.go.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.go.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.go.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.go.syntaxes.go.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.groovy.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.groovy.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.groovy.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.groovy.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.groovy.syntaxes.groovy.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.handlebars.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.handlebars.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.handlebars.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.handlebars.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.handlebars.syntaxes.Handlebars.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.hlsl.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.hlsl.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.hlsl.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.hlsl.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.hlsl.syntaxes.hlsl.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.html.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.html.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.html.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.html.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.html.syntaxes.html-derivative.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.html.syntaxes.html.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.ini.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.ini.ini.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.ini.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.ini.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.ini.properties.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.ini.syntaxes.ini.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.java.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.java.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.java.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.java.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.java.syntaxes.java.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.javascript.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.javascript.javascript-language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.javascript.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.javascript.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.javascript.syntaxes.JavaScript.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.javascript.syntaxes.JavaScriptReact.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.javascript.tags-language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.json.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.json.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.json.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.json.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.json.syntaxes.JSON.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.json.syntaxes.JSONC.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.julia.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.julia.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.julia.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.julia.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.julia.syntaxes.julia.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.latex.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.latex.latex-cpp-embedded-language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.latex.latex-language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.latex.markdown-latex-combined-language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.latex.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.latex.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.latex.syntaxes.Bibtex.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.latex.syntaxes.cpp-grammar-bailout.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.latex.syntaxes.LaTeX.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.latex.syntaxes.markdown-latex-combined.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.latex.syntaxes.TeX.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.less.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.less.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.less.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.less.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.less.syntaxes.less.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.log.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.log.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.log.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.log.syntaxes.log.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.lua.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.lua.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.lua.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.lua.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.lua.syntaxes.lua.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.make.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.make.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.make.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.make.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.make.syntaxes.make.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.syntaxes.markdown.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.markdownmath.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.markdownmath.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.markdownmath.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.markdownmath.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.markdownmath.syntaxes.md-math-block.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.markdownmath.syntaxes.md-math-inline.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.markdownmath.syntaxes.md-math.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.objectivec.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.objectivec.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.objectivec.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.objectivec.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.objectivec.syntaxes.objective-c--.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.objectivec.syntaxes.objective-c.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.pascal.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.pascal.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.pascal.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.pascal.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.pascal.syntaxes.pascal.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.perl.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.perl.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.perl.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.perl.perl.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.perl.perl6.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.perl.syntaxes.perl.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.perl.syntaxes.perl6.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.php.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.php.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.php.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.php.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.php.syntaxes.html.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.php.syntaxes.php.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.powershell.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.powershell.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.powershell.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.powershell.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.powershell.syntaxes.powershell.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.pug.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.pug.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.pug.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.pug.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.pug.syntaxes.pug.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.python.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.python.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.python.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.python.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.python.syntaxes.MagicPython.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.python.syntaxes.MagicRegExp.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.r.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.r.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.r.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.r.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.r.syntaxes.r.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.razor.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.razor.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.razor.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.razor.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.razor.syntaxes.cshtml.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.ruby.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.ruby.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.ruby.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.ruby.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.ruby.syntaxes.ruby.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.rust.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.rust.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.rust.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.rust.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.rust.syntaxes.rust.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.scss.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.scss.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.scss.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.scss.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.scss.syntaxes.sassdoc.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.scss.syntaxes.scss.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.shaderlab.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.shaderlab.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.shaderlab.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.shaderlab.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.shaderlab.syntaxes.shaderlab.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.shellscript.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.shellscript.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.shellscript.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.shellscript.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.shellscript.syntaxes.shell-unix-bash.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.sql.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.sql.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.sql.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.sql.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.sql.syntaxes.sql.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.swift.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.swift.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.swift.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.swift.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.swift.syntaxes.swift.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.syntaxes.jsdoc.js.injection.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.syntaxes.jsdoc.ts.injection.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.syntaxes.TypeScript.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.syntaxes.TypeScriptReact.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.vb.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.vb.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.vb.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.vb.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.vb.syntaxes.asp-vb-net.tmlanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.xml.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.xml.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.xml.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.xml.syntaxes.xml.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.xml.syntaxes.xsl.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.xml.xml.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.xml.xsl.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.yaml.cgmanifest.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.yaml.language-configuration.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.yaml.package.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.yaml.package.nls.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.yaml.syntaxes.yaml.tmLanguage.json" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.bat.snippets.batchfile.code-snippets" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.coffeescript.snippets.coffeescript.code-snippets" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.cpp.snippets.c.code-snippets" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.cpp.snippets.cpp.code-snippets" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.csharp.snippets.csharp.code-snippets" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.fsharp.snippets.fsharp.code-snippets" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.groovy.snippets.groovy.code-snippets" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.java.snippets.java.code-snippets" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.javascript.snippets.javascript.code-snippets" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.snippets.markdown.code-snippets" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.php.snippets.php.code-snippets" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.powershell.snippets.powershell.code-snippets" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.swift.snippets.swift.code-snippets" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.snippets.typescript.code-snippets" />
+    <None Remove="TextMateSharp.Grammars.Resources.Grammars.vb.snippets.vb.code-snippets" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Themes.abyss-color-theme.json" LogicalName="TextMateSharp.Grammars.Resources.Themes.abyss-color-theme.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Themes.dark_plus.json" LogicalName="TextMateSharp.Grammars.Resources.Themes.dark_plus.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Themes.dark_vs.json" LogicalName="TextMateSharp.Grammars.Resources.Themes.dark_vs.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Themes.dimmed-monokai-color-theme.json" LogicalName="TextMateSharp.Grammars.Resources.Themes.dimmed-monokai-color-theme.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Themes.hc_black.json" LogicalName="TextMateSharp.Grammars.Resources.Themes.hc_black.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Themes.hc_light.json" LogicalName="TextMateSharp.Grammars.Resources.Themes.hc_light.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Themes.kimbie-dark-color-theme.json" LogicalName="TextMateSharp.Grammars.Resources.Themes.kimbie-dark-color-theme.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Themes.light_plus.json" LogicalName="TextMateSharp.Grammars.Resources.Themes.light_plus.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Themes.light_vs.json" LogicalName="TextMateSharp.Grammars.Resources.Themes.light_vs.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Themes.monokai-color-theme.json" LogicalName="TextMateSharp.Grammars.Resources.Themes.monokai-color-theme.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Themes.quietlight-color-theme.json" LogicalName="TextMateSharp.Grammars.Resources.Themes.quietlight-color-theme.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Themes.Red-color-theme.json" LogicalName="TextMateSharp.Grammars.Resources.Themes.Red-color-theme.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Themes.solarized-dark-color-theme.json" LogicalName="TextMateSharp.Grammars.Resources.Themes.solarized-dark-color-theme.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Themes.solarized-light-color-theme.json" LogicalName="TextMateSharp.Grammars.Resources.Themes.solarized-light-color-theme.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Themes.tomorrow-night-blue-color-theme.json" LogicalName="TextMateSharp.Grammars.Resources.Themes.tomorrow-night-blue-color-theme.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.asciidoc.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.asciidoc.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.asciidoc.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.asciidoc.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.asciidoc.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.asciidoc.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.asciidoc.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.asciidoc.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.asciidoc.syntaxes.asciidoc.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.asciidoc.syntaxes.asciidoc.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.bat.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.bat.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.bat.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.bat.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.bat.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.bat.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.bat.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.bat.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.bat.syntaxes.batchfile.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.bat.syntaxes.batchfile.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.clojure.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.clojure.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.clojure.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.clojure.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.clojure.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.clojure.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.clojure.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.clojure.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.clojure.syntaxes.clojure.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.clojure.syntaxes.clojure.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.coffeescript.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.coffeescript.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.coffeescript.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.coffeescript.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.coffeescript.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.coffeescript.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.coffeescript.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.coffeescript.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.coffeescript.syntaxes.coffeescript.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.coffeescript.syntaxes.coffeescript.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.cpp.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.cpp.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.cpp.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.cpp.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.cpp.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.cpp.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.cpp.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.cpp.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.cpp.syntaxes.c.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.cpp.syntaxes.c.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.cpp.syntaxes.cpp.embedded.macro.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.cpp.syntaxes.cpp.embedded.macro.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.cpp.syntaxes.cpp.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.cpp.syntaxes.cpp.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.cpp.syntaxes.cuda-cpp.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.cpp.syntaxes.cuda-cpp.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.cpp.syntaxes.platform.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.cpp.syntaxes.platform.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.csharp.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.csharp.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.csharp.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.csharp.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.csharp.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.csharp.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.csharp.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.csharp.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.csharp.syntaxes.csharp.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.csharp.syntaxes.csharp.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.css.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.css.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.css.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.css.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.css.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.css.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.css.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.css.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.css.syntaxes.css.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.css.syntaxes.css.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.dart.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.dart.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.dart.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.dart.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.dart.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.dart.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.dart.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.dart.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.dart.syntaxes.dart.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.dart.syntaxes.dart.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.diff.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.diff.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.diff.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.diff.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.diff.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.diff.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.diff.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.diff.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.diff.syntaxes.diff.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.diff.syntaxes.diff.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.docker.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.docker.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.docker.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.docker.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.docker.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.docker.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.docker.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.docker.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.docker.syntaxes.docker.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.docker.syntaxes.docker.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.fsharp.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.fsharp.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.fsharp.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.fsharp.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.fsharp.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.fsharp.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.fsharp.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.fsharp.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.fsharp.syntaxes.fsharp.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.fsharp.syntaxes.fsharp.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.git.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.git.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.git.languages.diff.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.git.languages.diff.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.git.languages.ignore.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.git.languages.ignore.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.git.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.git.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.git.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.git.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.git.syntaxes.diff.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.git.syntaxes.diff.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.git.syntaxes.ignore.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.git.syntaxes.ignore.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.go.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.go.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.go.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.go.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.go.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.go.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.go.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.go.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.go.syntaxes.go.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.go.syntaxes.go.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.groovy.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.groovy.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.groovy.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.groovy.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.groovy.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.groovy.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.groovy.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.groovy.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.groovy.syntaxes.groovy.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.groovy.syntaxes.groovy.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.handlebars.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.handlebars.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.handlebars.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.handlebars.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.handlebars.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.handlebars.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.handlebars.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.handlebars.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.handlebars.syntaxes.Handlebars.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.handlebars.syntaxes.Handlebars.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.hlsl.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.hlsl.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.hlsl.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.hlsl.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.hlsl.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.hlsl.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.hlsl.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.hlsl.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.hlsl.syntaxes.hlsl.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.hlsl.syntaxes.hlsl.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.html.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.html.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.html.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.html.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.html.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.html.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.html.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.html.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.html.syntaxes.html-derivative.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.html.syntaxes.html-derivative.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.html.syntaxes.html.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.html.syntaxes.html.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.ini.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.ini.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.ini.ini.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.ini.ini.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.ini.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.ini.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.ini.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.ini.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.ini.properties.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.ini.properties.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.ini.syntaxes.ini.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.ini.syntaxes.ini.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.java.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.java.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.java.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.java.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.java.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.java.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.java.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.java.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.java.syntaxes.java.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.java.syntaxes.java.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.javascript.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.javascript.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.javascript.javascript-language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.javascript.javascript-language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.javascript.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.javascript.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.javascript.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.javascript.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.javascript.syntaxes.JavaScript.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.javascript.syntaxes.JavaScript.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.javascript.syntaxes.JavaScriptReact.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.javascript.syntaxes.JavaScriptReact.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.javascript.tags-language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.javascript.tags-language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.json.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.json.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.json.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.json.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.json.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.json.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.json.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.json.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.json.syntaxes.JSON.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.json.syntaxes.JSON.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.json.syntaxes.JSONC.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.json.syntaxes.JSONC.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.julia.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.julia.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.julia.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.julia.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.julia.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.julia.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.julia.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.julia.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.julia.syntaxes.julia.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.julia.syntaxes.julia.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.latex.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.latex.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.latex.latex-cpp-embedded-language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.latex.latex-cpp-embedded-language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.latex.latex-language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.latex.latex-language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.latex.markdown-latex-combined-language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.latex.markdown-latex-combined-language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.latex.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.latex.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.latex.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.latex.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.latex.syntaxes.Bibtex.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.latex.syntaxes.Bibtex.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.latex.syntaxes.cpp-grammar-bailout.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.latex.syntaxes.cpp-grammar-bailout.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.latex.syntaxes.LaTeX.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.latex.syntaxes.LaTeX.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.latex.syntaxes.markdown-latex-combined.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.latex.syntaxes.markdown-latex-combined.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.latex.syntaxes.TeX.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.latex.syntaxes.TeX.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.less.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.less.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.less.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.less.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.less.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.less.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.less.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.less.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.less.syntaxes.less.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.less.syntaxes.less.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.log.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.log.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.log.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.log.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.log.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.log.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.log.syntaxes.log.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.log.syntaxes.log.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.lua.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.lua.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.lua.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.lua.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.lua.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.lua.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.lua.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.lua.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.lua.syntaxes.lua.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.lua.syntaxes.lua.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.make.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.make.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.make.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.make.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.make.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.make.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.make.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.make.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.make.syntaxes.make.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.make.syntaxes.make.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.syntaxes.markdown.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.syntaxes.markdown.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.markdownmath.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.markdownmath.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.markdownmath.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.markdownmath.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.markdownmath.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.markdownmath.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.markdownmath.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.markdownmath.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.markdownmath.syntaxes.md-math-block.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.markdownmath.syntaxes.md-math-block.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.markdownmath.syntaxes.md-math-inline.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.markdownmath.syntaxes.md-math-inline.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.markdownmath.syntaxes.md-math.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.markdownmath.syntaxes.md-math.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.objectivec.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.objectivec.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.objectivec.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.objectivec.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.objectivec.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.objectivec.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.objectivec.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.objectivec.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.objectivec.syntaxes.objective-c--.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.objectivec.syntaxes.objective-c++.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.objectivec.syntaxes.objective-c.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.objectivec.syntaxes.objective-c.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.pascal.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.pascal.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.pascal.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.pascal.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.pascal.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.pascal.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.pascal.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.pascal.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.pascal.syntaxes.pascal.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.pascal.syntaxes.pascal.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.perl.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.perl.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.perl.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.perl.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.perl.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.perl.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.perl.perl.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.perl.perl.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.perl.perl6.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.perl.perl6.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.perl.syntaxes.perl.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.perl.syntaxes.perl.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.perl.syntaxes.perl6.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.perl.syntaxes.perl6.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.php.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.php.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.php.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.php.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.php.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.php.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.php.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.php.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.php.syntaxes.html.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.php.syntaxes.html.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.php.syntaxes.php.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.php.syntaxes.php.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.powershell.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.powershell.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.powershell.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.powershell.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.powershell.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.powershell.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.powershell.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.powershell.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.powershell.syntaxes.powershell.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.powershell.syntaxes.powershell.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.pug.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.pug.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.pug.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.pug.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.pug.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.pug.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.pug.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.pug.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.pug.syntaxes.pug.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.pug.syntaxes.pug.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.python.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.python.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.python.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.python.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.python.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.python.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.python.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.python.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.python.syntaxes.MagicPython.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.python.syntaxes.MagicPython.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.python.syntaxes.MagicRegExp.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.python.syntaxes.MagicRegExp.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.r.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.r.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.r.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.r.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.r.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.r.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.r.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.r.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.r.syntaxes.r.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.r.syntaxes.r.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.razor.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.razor.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.razor.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.razor.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.razor.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.razor.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.razor.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.razor.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.razor.syntaxes.cshtml.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.razor.syntaxes.cshtml.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.ruby.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.ruby.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.ruby.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.ruby.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.ruby.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.ruby.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.ruby.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.ruby.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.ruby.syntaxes.ruby.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.ruby.syntaxes.ruby.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.rust.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.rust.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.rust.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.rust.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.rust.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.rust.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.rust.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.rust.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.rust.syntaxes.rust.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.rust.syntaxes.rust.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.scss.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.scss.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.scss.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.scss.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.scss.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.scss.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.scss.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.scss.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.scss.syntaxes.sassdoc.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.scss.syntaxes.sassdoc.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.scss.syntaxes.scss.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.scss.syntaxes.scss.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.shaderlab.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.shaderlab.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.shaderlab.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.shaderlab.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.shaderlab.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.shaderlab.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.shaderlab.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.shaderlab.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.shaderlab.syntaxes.shaderlab.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.shaderlab.syntaxes.shaderlab.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.shellscript.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.shellscript.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.shellscript.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.shellscript.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.shellscript.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.shellscript.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.shellscript.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.shellscript.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.shellscript.syntaxes.shell-unix-bash.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.shellscript.syntaxes.shell-unix-bash.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.sql.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.sql.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.sql.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.sql.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.sql.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.sql.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.sql.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.sql.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.sql.syntaxes.sql.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.sql.syntaxes.sql.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.swift.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.swift.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.swift.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.swift.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.swift.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.swift.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.swift.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.swift.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.swift.syntaxes.swift.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.swift.syntaxes.swift.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.syntaxes.jsdoc.js.injection.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.syntaxes.jsdoc.js.injection.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.syntaxes.jsdoc.ts.injection.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.syntaxes.jsdoc.ts.injection.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.syntaxes.TypeScript.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.syntaxes.TypeScript.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.syntaxes.TypeScriptReact.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.syntaxes.TypeScriptReact.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.vb.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.vb.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.vb.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.vb.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.vb.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.vb.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.vb.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.vb.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.vb.syntaxes.asp-vb-net.tmlanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.vb.syntaxes.asp-vb-net.tmlanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.xml.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.xml.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.xml.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.xml.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.xml.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.xml.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.xml.syntaxes.xml.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.xml.syntaxes.xml.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.xml.syntaxes.xsl.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.xml.syntaxes.xsl.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.xml.xml.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.xml.xml.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.xml.xsl.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.xml.xsl.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.yaml.cgmanifest.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.yaml.cgmanifest.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.yaml.language-configuration.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.yaml.language-configuration.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.yaml.package.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.yaml.package.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.yaml.package.nls.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.yaml.package.nls.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.yaml.syntaxes.yaml.tmLanguage.json" LogicalName="TextMateSharp.Grammars.Resources.Grammars.yaml.syntaxes.yaml.tmLanguage.json" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.bat.snippets.batchfile.code-snippets" LogicalName="TextMateSharp.Grammars.Resources.Grammars.bat.snippets.batchfile.code-snippets" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.coffeescript.snippets.coffeescript.code-snippets" LogicalName="TextMateSharp.Grammars.Resources.Grammars.coffeescript.snippets.coffeescript.code-snippets" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.cpp.snippets.c.code-snippets" LogicalName="TextMateSharp.Grammars.Resources.Grammars.cpp.snippets.c.code-snippets" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.cpp.snippets.cpp.code-snippets" LogicalName="TextMateSharp.Grammars.Resources.Grammars.cpp.snippets.cpp.code-snippets" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.csharp.snippets.csharp.code-snippets" LogicalName="TextMateSharp.Grammars.Resources.Grammars.csharp.snippets.csharp.code-snippets" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.fsharp.snippets.fsharp.code-snippets" LogicalName="TextMateSharp.Grammars.Resources.Grammars.fsharp.snippets.fsharp.code-snippets" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.groovy.snippets.groovy.code-snippets" LogicalName="TextMateSharp.Grammars.Resources.Grammars.groovy.snippets.groovy.code-snippets" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.java.snippets.java.code-snippets" LogicalName="TextMateSharp.Grammars.Resources.Grammars.java.snippets.java.code-snippets" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.javascript.snippets.javascript.code-snippets" LogicalName="TextMateSharp.Grammars.Resources.Grammars.javascript.snippets.javascript.code-snippets" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.snippets.markdown.code-snippets" LogicalName="TextMateSharp.Grammars.Resources.Grammars.markdownbasics.snippets.markdown.code-snippets" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.php.snippets.php.code-snippets" LogicalName="TextMateSharp.Grammars.Resources.Grammars.php.snippets.php.code-snippets" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.powershell.snippets.powershell.code-snippets" LogicalName="TextMateSharp.Grammars.Resources.Grammars.powershell.snippets.powershell.code-snippets" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.swift.snippets.swift.code-snippets" LogicalName="TextMateSharp.Grammars.Resources.Grammars.swift.snippets.swift.code-snippets" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.snippets.typescript.code-snippets" LogicalName="TextMateSharp.Grammars.Resources.Grammars.typescriptbasics.snippets.typescript.code-snippets" />
+    <EmbeddedResource Include="TextMateSharp.Grammars.Resources.Grammars.vb.snippets.vb.code-snippets" LogicalName="TextMateSharp.Grammars.Resources.Grammars.vb.snippets.vb.code-snippets" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Text.Json">
+      <HintPath>..\..\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="TextMateSharp">
+      <HintPath>..\..\TextMateSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

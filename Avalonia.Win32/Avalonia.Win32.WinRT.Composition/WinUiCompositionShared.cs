@@ -1,0 +1,47 @@
+using System;
+using MicroCom.Runtime;
+
+namespace Avalonia.Win32.WinRT.Composition;
+
+internal class WinUiCompositionShared : IDisposable
+{
+	public static readonly Version MinWinCompositionVersion = new Version(10, 0, 17134);
+
+	public static readonly Version MinAcrylicVersion = new Version(10, 0, 15063);
+
+	public static readonly Version MinHostBackdropVersion = new Version(10, 0, 22000);
+
+	public ICompositor Compositor { get; }
+
+	public ICompositor5 Compositor5 { get; }
+
+	public ICompositorDesktopInterop DesktopInterop { get; }
+
+	public ICompositionBrush BlurBrush { get; }
+
+	public ICompositionBrush? MicaBrushLight { get; }
+
+	public ICompositionBrush? MicaBrushDark { get; }
+
+	public object SyncRoot { get; } = new object();
+
+	public WinUiCompositionShared(ICompositor compositor)
+	{
+		Compositor = compositor.CloneReference();
+		Compositor5 = compositor.QueryInterface<ICompositor5>();
+		BlurBrush = WinUiCompositionUtils.CreateAcrylicBlurBackdropBrush(compositor);
+		MicaBrushLight = WinUiCompositionUtils.CreateMicaBackdropBrush(compositor, 242f, 0.6f);
+		MicaBrushDark = WinUiCompositionUtils.CreateMicaBackdropBrush(compositor, 32f, 0.8f);
+		DesktopInterop = compositor.QueryInterface<ICompositorDesktopInterop>();
+	}
+
+	public void Dispose()
+	{
+		BlurBrush.Dispose();
+		MicaBrushLight?.Dispose();
+		MicaBrushDark?.Dispose();
+		DesktopInterop.Dispose();
+		Compositor.Dispose();
+		Compositor5.Dispose();
+	}
+}

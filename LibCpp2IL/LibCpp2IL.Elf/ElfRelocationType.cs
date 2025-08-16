@@ -1,0 +1,20 @@
+namespace LibCpp2IL.Elf;
+
+public enum ElfRelocationType : uint
+{
+	R_ARM_ABS32 = 2u,
+	R_ARM_REL32 = 3u,
+	R_ARM_PC13 = 4u,
+	R_ARM_COPY = 20u,
+	R_AARCH64_ABS64 = 257u,
+	R_AARCH64_PREL64 = 260u,
+	R_AARCH64_GLOB_DAT = 1025u,
+	R_AARCH64_JUMP_SLOT = 1026u,
+	R_AARCH64_RELATIVE = 1027u,
+	R_386_32 = 1u,
+	R_386_PC32 = 2u,
+	R_386_GLOB_DAT = 6u,
+	R_386_JMP_SLOT = 7u,
+	R_AMD64_64 = 1u,
+	R_AMD64_RELATIVE = 8u
+}

@@ -1,0 +1,80 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>AvaloniaEdit</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="AvaloniaEdit.Highlighting.Resources.ASPX.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.Boo.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.Coco-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.CPP-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.CSharp-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.CSS-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.HTML-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.Java-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.JavaScript-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.Json.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.MarkDown-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.MarkDownWithFontSize-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.Patch-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.PHP-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.PowerShell.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.Python-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.Tex-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.TSQL-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.VB-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.XML-Mode.xshd" />
+    <None Remove="AvaloniaEdit.Highlighting.Resources.XmlDoc.xshd" />
+    <None Remove="-AvaloniaResources" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.ASPX.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.ASPX.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.Boo.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.Boo.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.Coco-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.Coco-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.CPP-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.CPP-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.CSharp-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.CSharp-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.CSS-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.CSS-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.HTML-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.HTML-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.Java-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.Java-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.JavaScript-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.JavaScript-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.Json.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.Json.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.MarkDown-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.MarkDown-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.MarkDownWithFontSize-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.MarkDownWithFontSize-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.Patch-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.Patch-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.PHP-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.PHP-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.PowerShell.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.PowerShell.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.Python-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.Python-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.Tex-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.Tex-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.TSQL-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.TSQL-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.VB-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.VB-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.XML-Mode.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.XML-Mode.xshd" />
+    <EmbeddedResource Include="AvaloniaEdit.Highlighting.Resources.XmlDoc.xshd" LogicalName="AvaloniaEdit.Highlighting.Resources.XmlDoc.xshd" />
+    <EmbeddedResource Include="-AvaloniaResources" LogicalName="!AvaloniaResources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Avalonia.Base">
+      <HintPath>..\..\Avalonia.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Controls">
+      <HintPath>..\..\Avalonia.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Markup">
+      <HintPath>..\..\Avalonia.Markup.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.35\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.35\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Markup.Xaml">
+      <HintPath>..\..\Avalonia.Markup.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+namespace LibCpp2IL.MachO;
+
+public enum MachOFileType : uint
+{
+	MH_OBJECT = 1u,
+	MH_EXECUTE = 2u,
+	MH_DYLIB = 6u,
+	MH_BUNDLE = 8u,
+	MH_DSYM = 10u,
+	MH_KEXT_BUNDLE = 11u,
+	MH_APP_EXTENSION_SAFE = 33554432u,
+	MY_SIM_SUPPORT = 134217728u,
+	MH_DYLIB_IN_CACHE = 2147483648u
+}

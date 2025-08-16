@@ -1,0 +1,38 @@
+namespace SixLabors.ImageSharp.Metadata.Profiles.Icc;
+
+internal enum IccSignatureName : uint
+{
+	Unknown = 0u,
+	SceneColorimetryEstimates = 1935896421u,
+	SceneAppearanceEstimates = 1935765605u,
+	FocalPlaneColorimetryEstimates = 1718641509u,
+	ReflectionHardcopyOriginalColorimetry = 1919446883u,
+	ReflectionPrintOutputColorimetry = 1919971171u,
+	PerceptualReferenceMediumGamut = 1886547303u,
+	FilmScanner = 1718838126u,
+	DigitalCamera = 1684234605u,
+	ReflectiveScanner = 1920164718u,
+	InkJetPrinter = 1768580468u,
+	ThermalWaxPrinter = 1953980792u,
+	ElectrophotographicPrinter = 1701865583u,
+	ElectrostaticPrinter = 1702065249u,
+	DyeSublimationPrinter = 1685288290u,
+	PhotographicPaperPrinter = 1919969391u,
+	FilmWriter = 1718645358u,
+	VideoMonitor = 1986618477u,
+	VideoCamera = 1986618467u,
+	ProjectionTelevision = 1886024822u,
+	CathodeRayTubeDisplay = 1129468960u,
+	PassiveMatrixDisplay = 1347240992u,
+	ActiveMatrixDisplay = 1095582752u,
+	PhotoCD = 1263551300u,
+	PhotographicImageSetter = 1768777587u,
+	Gravure = 1735549302u,
+	OffsetLithography = 1868981875u,
+	Silkscreen = 1936288875u,
+	Flexography = 1718379896u,
+	MotionPictureFilmScanner = 1836082803u,
+	MotionPictureFilmRecorder = 1836082802u,
+	DigitalMotionPictureCamera = 1684893795u,
+	DigitalCinemaProjector = 1684236912u
+}

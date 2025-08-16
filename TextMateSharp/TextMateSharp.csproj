@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>TextMateSharp</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="System.Text.Json">
+      <HintPath>..\..\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.35\System.Memory.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

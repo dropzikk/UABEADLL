@@ -1,0 +1,10 @@
+namespace SixLabors.ImageSharp.Formats.Bmp;
+
+internal enum BmpColorSpace
+{
+	LCS_CALIBRATED_RGB = 0,
+	LCS_WINDOWS_COLOR_SPACE = 1466527264,
+	LCS_sRGB = 1934772034,
+	PROFILE_LINKED = 1279872587,
+	PROFILE_EMBEDDED = 1296188740
+}

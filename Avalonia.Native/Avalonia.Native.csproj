@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Avalonia.Native</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>netcoreapp6.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Avalonia.Controls">
+      <HintPath>..\..\Avalonia.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="MicroCom.Runtime">
+      <HintPath>..\..\MicroCom.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Base">
+      <HintPath>..\..\Avalonia.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.OpenGL">
+      <HintPath>..\..\Avalonia.OpenGL.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Dialogs">
+      <HintPath>..\..\Avalonia.Dialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.MicroCom">
+      <HintPath>..\..\Avalonia.MicroCom.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Metal">
+      <HintPath>..\..\Avalonia.Metal.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
