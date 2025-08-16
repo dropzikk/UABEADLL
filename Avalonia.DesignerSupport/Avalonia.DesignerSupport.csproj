@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Avalonia.DesignerSupport</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>netcoreapp6.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Avalonia.DesignerSupport.Remote.HtmlTransport.webapp.build.index-OF2H3XL3.js.gz" />
+    <None Remove="Avalonia.DesignerSupport.Remote.HtmlTransport.webapp.build.index-OF2H3XL3.js.map.gz" />
+    <None Remove="Avalonia.DesignerSupport.Remote.HtmlTransport.webapp.build.index.html.gz" />
+    <EmbeddedResource Include="Avalonia.DesignerSupport.Remote.HtmlTransport.webapp.build.index-OF2H3XL3.js.gz" LogicalName="Avalonia.DesignerSupport.Remote.HtmlTransport.webapp.build.index-OF2H3XL3.js.gz" />
+    <EmbeddedResource Include="Avalonia.DesignerSupport.Remote.HtmlTransport.webapp.build.index-OF2H3XL3.js.map.gz" LogicalName="Avalonia.DesignerSupport.Remote.HtmlTransport.webapp.build.index-OF2H3XL3.js.map.gz" />
+    <EmbeddedResource Include="Avalonia.DesignerSupport.Remote.HtmlTransport.webapp.build.index.html.gz" LogicalName="Avalonia.DesignerSupport.Remote.HtmlTransport.webapp.build.index.html.gz" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Avalonia.Controls">
+      <HintPath>..\..\Avalonia.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Base">
+      <HintPath>..\..\Avalonia.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Remote.Protocol">
+      <HintPath>..\..\Avalonia.Remote.Protocol.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Markup.Xaml">
+      <HintPath>..\..\Avalonia.Markup.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
