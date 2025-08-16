@@ -1,0 +1,20 @@
+using System;
+using Avalonia.Data.Core;
+
+namespace Avalonia.Markup.Xaml.MarkupExtensions.CompiledBindings;
+
+internal class StrongTypeCastNode : TypeCastNode
+{
+	private readonly Func<object?, object?> _cast;
+
+	public StrongTypeCastNode(Type type, Func<object?, object?> cast)
+		: base(type)
+	{
+		_cast = cast;
+	}
+
+	protected override object? Cast(object? value)
+	{
+		return _cast(value);
+	}
+}

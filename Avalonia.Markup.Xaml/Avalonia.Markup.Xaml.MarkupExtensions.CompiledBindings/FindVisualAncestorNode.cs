@@ -1,0 +1,51 @@
+using System;
+using Avalonia.Data.Core;
+using Avalonia.Reactive;
+using Avalonia.VisualTree;
+
+namespace Avalonia.Markup.Xaml.MarkupExtensions.CompiledBindings;
+
+internal class FindVisualAncestorNode : ExpressionNode
+{
+	private readonly int _level;
+
+	private readonly Type? _ancestorType;
+
+	private IDisposable? _subscription;
+
+	public override string Description
+	{
+		get
+		{
+			if (_ancestorType == null)
+			{
+				return FormattableString.Invariant($"$visualparent[{_level}]");
+			}
+			return FormattableString.Invariant($"$visualparent[{_ancestorType.Name}, {_level}]");
+		}
+	}
+
+	public FindVisualAncestorNode(Type? ancestorType, int level)
+	{
+		_level = level;
+		_ancestorType = ancestorType;
+	}
+
+	protected override void StartListeningCore(WeakReference<object?> reference)
+	{
+		if (reference.TryGetTarget(out object target) && target is Visual relativeTo)
+		{
+			_subscription = VisualLocator.Track(relativeTo, _level, _ancestorType).Subscribe(base.ValueChanged);
+		}
+		else
+		{
+			_subscription = null;
+		}
+	}
+
+	protected override void StopListeningCore()
+	{
+		_subscription?.Dispose();
+		_subscription = null;
+	}
+}
