@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>AssetsTools.NET.Texture</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>netcoreapp6.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="AssetsTools.NET">
+      <HintPath>..\..\AssetsTools.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="AssetRipper.TextureDecoder">
+      <HintPath>..\..\AssetRipper.TextureDecoder.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
