@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Avalonia.Controls.ColorPicker</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>netcoreapp6.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Avalonia.Controls.ColorPicker.Themes.Fluent.ColorPicker.xaml" />
+    <None Remove="Avalonia.Controls.ColorPicker.Themes.Fluent.ColorPreviewer.xaml" />
+    <None Remove="Avalonia.Controls.ColorPicker.Themes.Fluent.ColorSlider.xaml" />
+    <None Remove="Avalonia.Controls.ColorPicker.Themes.Fluent.ColorSpectrum.xaml" />
+    <None Remove="Avalonia.Controls.ColorPicker.Themes.Fluent.ColorView.xaml" />
+    <None Remove="Avalonia.Controls.ColorPicker.Themes.Fluent.Fluent.xaml" />
+    <None Remove="Avalonia.Controls.ColorPicker.Themes.Simple.ColorPicker.xaml" />
+    <None Remove="Avalonia.Controls.ColorPicker.Themes.Simple.ColorPreviewer.xaml" />
+    <None Remove="Avalonia.Controls.ColorPicker.Themes.Simple.ColorSlider.xaml" />
+    <None Remove="Avalonia.Controls.ColorPicker.Themes.Simple.ColorSpectrum.xaml" />
+    <None Remove="Avalonia.Controls.ColorPicker.Themes.Simple.ColorView.xaml" />
+    <None Remove="Avalonia.Controls.ColorPicker.Themes.Simple.Simple.xaml" />
+    <None Remove="-AvaloniaResources" />
+    <EmbeddedResource Include="Avalonia.Controls.ColorPicker.Themes.Fluent.ColorPicker.xaml" LogicalName="Avalonia.Controls.ColorPicker.Themes.Fluent.ColorPicker.xaml" />
+    <EmbeddedResource Include="Avalonia.Controls.ColorPicker.Themes.Fluent.ColorPreviewer.xaml" LogicalName="Avalonia.Controls.ColorPicker.Themes.Fluent.ColorPreviewer.xaml" />
+    <EmbeddedResource Include="Avalonia.Controls.ColorPicker.Themes.Fluent.ColorSlider.xaml" LogicalName="Avalonia.Controls.ColorPicker.Themes.Fluent.ColorSlider.xaml" />
+    <EmbeddedResource Include="Avalonia.Controls.ColorPicker.Themes.Fluent.ColorSpectrum.xaml" LogicalName="Avalonia.Controls.ColorPicker.Themes.Fluent.ColorSpectrum.xaml" />
+    <EmbeddedResource Include="Avalonia.Controls.ColorPicker.Themes.Fluent.ColorView.xaml" LogicalName="Avalonia.Controls.ColorPicker.Themes.Fluent.ColorView.xaml" />
+    <EmbeddedResource Include="Avalonia.Controls.ColorPicker.Themes.Fluent.Fluent.xaml" LogicalName="Avalonia.Controls.ColorPicker.Themes.Fluent.Fluent.xaml" />
+    <EmbeddedResource Include="Avalonia.Controls.ColorPicker.Themes.Simple.ColorPicker.xaml" LogicalName="Avalonia.Controls.ColorPicker.Themes.Simple.ColorPicker.xaml" />
+    <EmbeddedResource Include="Avalonia.Controls.ColorPicker.Themes.Simple.ColorPreviewer.xaml" LogicalName="Avalonia.Controls.ColorPicker.Themes.Simple.ColorPreviewer.xaml" />
+    <EmbeddedResource Include="Avalonia.Controls.ColorPicker.Themes.Simple.ColorSlider.xaml" LogicalName="Avalonia.Controls.ColorPicker.Themes.Simple.ColorSlider.xaml" />
+    <EmbeddedResource Include="Avalonia.Controls.ColorPicker.Themes.Simple.ColorSpectrum.xaml" LogicalName="Avalonia.Controls.ColorPicker.Themes.Simple.ColorSpectrum.xaml" />
+    <EmbeddedResource Include="Avalonia.Controls.ColorPicker.Themes.Simple.ColorView.xaml" LogicalName="Avalonia.Controls.ColorPicker.Themes.Simple.ColorView.xaml" />
+    <EmbeddedResource Include="Avalonia.Controls.ColorPicker.Themes.Simple.Simple.xaml" LogicalName="Avalonia.Controls.ColorPicker.Themes.Simple.Simple.xaml" />
+    <EmbeddedResource Include="-AvaloniaResources" LogicalName="!AvaloniaResources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Avalonia.Base">
+      <HintPath>..\..\Avalonia.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Controls">
+      <HintPath>..\..\Avalonia.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Markup.Xaml">
+      <HintPath>..\..\Avalonia.Markup.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Markup">
+      <HintPath>..\..\Avalonia.Markup.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
