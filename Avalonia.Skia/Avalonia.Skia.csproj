@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Avalonia.Skia</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>netcoreapp6.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Avalonia.Skia.Assets.NoiseAsset_256X256_PNG.png" />
+    <EmbeddedResource Include="Avalonia.Skia.Assets.NoiseAsset_256X256_PNG.png" LogicalName="Avalonia.Skia.Assets.NoiseAsset_256X256_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Avalonia.Controls">
+      <HintPath>..\..\Avalonia.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Base">
+      <HintPath>..\..\Avalonia.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp">
+      <HintPath>..\..\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="HarfBuzzSharp">
+      <HintPath>..\..\HarfBuzzSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.OpenGL">
+      <HintPath>..\..\Avalonia.OpenGL.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Metal">
+      <HintPath>..\..\Avalonia.Metal.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
